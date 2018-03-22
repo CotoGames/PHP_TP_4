@@ -22,7 +22,8 @@
 					</a></li>
 		</ul>
 		<?php 
-		if(!isset($_SESSION['logged'])|| $_SESSION['logged']==false){?>
+		if(!isset($_SESSION['logged'])){
+		?>
 		<ul class="nav navbar-nav navbar-right">
 			<li <?php echo ($page=='connexion' ? 'class="active"':'')?>><a href="index.php?page=connexion"><?= MENU_CONNEXION ?></a></li>
 		</ul>
@@ -31,9 +32,14 @@
 		else{
 		?>
 			<ul class="nav navbar-nav navbar-right">
-				<li <?php echo ($page=='index' ? 'class="active"':'')?>><a href="index.php">
-						<?= MENU_DECONNEXION ?><?php $_SESSION['logged']=false ?>
+				<li <?php echo ($page=='deconnexion' ? 'class="active"':'')?>><a href="index.php?page=deconnexion">
+						<?= MENU_DECONNEXION ?>
 					</a></li>
+			</ul>
+			<ul class="nav navbar-nav">
+				<li <?php echo($page=='addfilm' ? 'class="active"':'')?>><a href="index.php?page=addfilm.php">
+						<?= MENU_ADDFILM ?>
+				</a></li>
 			</ul>
 		<?php 
 		} 

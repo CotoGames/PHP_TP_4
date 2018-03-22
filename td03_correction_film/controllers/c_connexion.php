@@ -7,6 +7,7 @@ if (isset($_POST['valider'])){
     if($_POST['pseudo']==ADMIN&&$_POST['pwd']==PASSWORD){
         $erreur_co = false;
         $message_erreur = CONNEXION_VALIDE;
+        $_SESSION['logged'] = true;
     }
     if($_POST['pseudo']!=ADMIN){
         $erreur_co = true;

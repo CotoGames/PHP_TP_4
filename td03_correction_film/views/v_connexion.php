@@ -29,7 +29,7 @@ if(isset($erreur_co)){
 
 <!-- Formulaire -->
 <?php 
-if (!isset($_SESSION['logged'])||$_SESSION['logged']==true){
+if (!isset($_SESSION['logged'])){
 ?>
 <form method="POST" action=<?php PATH_VIEWS.$page.'php'?>>
 	<h1><?= MENU_CONNEXION ?></h1>

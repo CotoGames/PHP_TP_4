@@ -14,6 +14,7 @@ define('ERREUR_QUERY', 'Problème d\'accès à la base de données. Contactez l\
 define('CONNEXION_VALIDE','Vous êtes connecté');
 define('BAD_PSEUDO','Identifiant inconnu');
 define('BAD_MDP','Mauvais mot de passe');
+define('MENU_ADDFILM','Ajouter un film');
 
 define('TITRE', 'Films disponibles');
 define('TITRE_FILM', 'Titre');
