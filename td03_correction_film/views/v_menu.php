@@ -21,9 +21,23 @@
 						<?= MENU_ACCUEIL ?>
 					</a></li>
 		</ul>
+		<?php 
+		if(!isset($_SESSION['logged'])|| $_SESSION['logged']==false){?>
 		<ul class="nav navbar-nav navbar-right">
-			<li <?php echo ($page=='index' ? 'class="active"':'')?>><a href="index.php"><?= MENU_CONNEXION ?></a></li>
+			<li <?php echo ($page=='connexion' ? 'class="active"':'')?>><a href="index.php?page=connexion"><?= MENU_CONNEXION ?></a></li>
 		</ul>
+		<?php
+		}
+		else{
+		?>
+			<ul class="nav navbar-nav navbar-right">
+				<li <?php echo ($page=='index' ? 'class="active"':'')?>><a href="index.php">
+						<?= MENU_DECONNEXION ?><?php $_SESSION['logged']=false ?>
+					</a></li>
+			</ul>
+		<?php 
+		} 
+		?>
 	</div>
 </nav>
 

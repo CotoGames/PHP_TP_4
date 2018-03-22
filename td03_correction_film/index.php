@@ -9,6 +9,10 @@
  * Licensed under the MIT license:
  * http://www.opensource.org/licenses/MIT
  */
+       
+// Création de la session
+session_name('p1623107');
+session_start();
 
 // Initialisation des paramètres du site
 require_once('./config/configuration.php');

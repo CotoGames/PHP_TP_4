@@ -15,13 +15,32 @@
 <?php require_once(PATH_VIEWS.'header.php');?>
 
 <!--  Zone message d'alerte -->
-<?php require_once(PATH_VIEWS.'alert.php');?>
-
+<?php
+if(isset($erreur_co)){
+	if($erreur_co ==true){
+		alert("danger",$message_erreur);
+	} else {
+		alert("success",$message_erreur);
+	}
+}
+?>
 
 <!--  Début de la page -->
 
 <!-- Formulaire -->
-<form method="POST" action="connexion.php">
+<?php 
+if (!isset($_SESSION['logged'])||$_SESSION['logged']==true){
+?>
+<form method="POST" action=<?php PATH_VIEWS.$page.'php'?>>
 	<h1><?= MENU_CONNEXION ?></h1>
-	<b>Nom d'utilisateur :</b> <input type="text" name="pseudo" value="Username"/>
-	<b>Mot de passe :</b> <input type="password" name="pwd" value="password"/>
+	<b>Nom d'utilisateur :</b> <input type="text" name="pseudo" />
+	<b>Mot de passe :</b> <input type="password" name="pwd"/>
+	<br/>
+	<input type="submit" name="valider" value="<?= SUBMIT ?>">
+</form>
+<?php }
+?>
+<!--  Fin de la page --> <!--  Pied de page -->
+<?php
+
+require_once (PATH_VIEWS . 'footer.php'); 

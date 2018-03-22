@@ -21,7 +21,7 @@ const BD_PWD = '';
 const LANG ='FR-fr';
 
 // Paramètres du site : nom de l'auteur ou des auteurs
-const AUTEUR = ''; 
+const AUTEUR = 'PIERRE SAVIGNY ET TRISTAN VALADE'; 
 
 //dossiers racines du site
 define('PATH_CONTROLLERS','./controllers/c_');
@@ -46,4 +46,4 @@ define('PATH_MENU', PATH_VIEWS.'menu.php');
 
 //Admin
 define('ADMIN','admin');
-define('PASSWORD','940c0f26fd5a30775bb1cbd1f6840398d39bb813');
+define('PASSWORD','mdp');
