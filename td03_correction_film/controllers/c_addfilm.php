@@ -22,10 +22,10 @@ if (isset($_POST['envoyer'])){
     } else if ($_FILES['poster']==null) {
        $erreur_formulaire = true;                                               //Crée une variable erreur_formulaire
        $message_erreur = "Aucune affiche séléctionée";                          //Définit le message d'erreur
-    }  else if($_FILES['poster']['type']!="imagegif/gif"&&$_FILES['poster']['type']!="image/png"&&$_FILES['poster']['type']!="image/jpeg"&&$_FILES['poster']['type']!="image/jpg"){
+    }  else if($_FILES['poster']['type']!="image/gif"&&$_FILES['poster']['type']!="image/png"&&$_FILES['poster']['type']!="image/jpeg"&&$_FILES['poster']['type']!="image/jpg"){
         $erreur_formulaire = true;
-        $message_erreur = "Merci d'upload une image";
-    } else if($_FILES['poster']['size']>=100000){
+        $message_erreur = "Merci d'upload une image ou un GIF";
+    } else if($_FILES['poster']['size']>100000){
         $erreur_formulaire = true;
         $message_erreur = "Fichier image trop lourd";
     } else {
