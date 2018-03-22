@@ -14,7 +14,7 @@
 ?>
 <?php require_once(PATH_VIEWS.'header.php');?>
 
-<!-- gestion des alertes-->
+<!-- Gestion des alertes-->
 <?php
 if (isset($erreur_formulaire)){
     if($erreur_formulaire == true){
@@ -24,10 +24,11 @@ if (isset($erreur_formulaire)){
     }
 } ?>
 
-<form method="POST" action=<?php PATH_VIEWS.$page.'php'?>>
-	<div class="label-group">
+<h1>Quel film souhaitez-vous ajouter?</h1>
+<form method="POST" action="index.php?page=addfilm" enctype ="multipart/form-data">
+	<div class="form-group">
 		<label for="exampleInputFile">Affiche du film :</label>
-		<input type="file" name="poster" id="poster" aria-describedby="fileHelp"><br/>
+		<input type="file" class="form-control-file" name="poster" aria-describedby="fileHelp"><br/>
 	</div>
 	<div class="form-group">
 		<label for="Titre du film">Titre du film :</label><br/>
