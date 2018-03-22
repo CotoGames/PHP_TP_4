@@ -3,6 +3,7 @@
 define('LOGO', 'Logo de la compagnie'); // Affiché si image non trouvée
 
 define('MENU_ACCUEIL','Accueil');
+define('MENU_CONNEXION','Connexion');
 define('TITRE_PAGE_ACCUEIL_TOUS','Tous les films');
 define('TITRE_PAGE_ACCUEIL_GENRE','Les films du genre ');
 define('TITRE_PAGE_FILM','Le détails du film ');
@@ -13,7 +14,7 @@ define('ERREUR_QUERY', 'Problème d\'accès à la base de données. Contactez l\
 
 define('TITRE', 'Films disponibles');
 define('TITRE_FILM', 'Titre');
-define('AUCUN_FILM', 'Pas de film sélectionné');
+define('AUCUN_FILM', 'Pas de film sélectionné');	
 define('ID_FILM_INCORRECT', 'Identifiant de film incorrect dans l\'URL');
 define('ID_GENRE_INCORRECT', 'Pas de genre pour ce film');
 define('FILM', 'film(s) selectionné(s)');
