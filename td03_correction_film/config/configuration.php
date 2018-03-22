@@ -45,5 +45,5 @@ define('PATH_LOGO', PATH_IMAGES.'logo.png');
 define('PATH_MENU', PATH_VIEWS.'menu.php');
 
 //Admin
-define('ADMIN','admin'),
-define('PASSWORD','940c0f26fd5a30775bb1cbd1f6840398d39bb813')
+define('ADMIN','admin');
+define('PASSWORD','940c0f26fd5a30775bb1cbd1f6840398d39bb813');
