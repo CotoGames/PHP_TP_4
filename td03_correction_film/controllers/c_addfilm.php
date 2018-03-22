@@ -15,10 +15,8 @@ $genDAO = new GenreDAO(DEBUG);
 $genres = $genDAO->getAll();
 $FilmDAO = new FilmDAO(DEBUG);
 if (isset($genId) and $genId != 0) {
-    $films = $FilmDAO->getAll($genId);
     $selectedGen = $genDAO->getById($genId);
-} else
-    $films = $FilmDAO->getAll();
+}
 
 
 // appel de la vue
