@@ -11,8 +11,10 @@ if (isset($_POST['genre'])) {
     }
 }
 
+																				echo 'lol_avtgrandif';
 //Vérification du formulaire
 if (isset($_POST['envoyer'])){
+																				echo 'lol1_grandif';
     if (!preg_match('#[a-z]#i', $_POST['titre'])){
        $erreur_formulaire = true;                                               //Crée une variable erreur_formulaire
        $message_erreur = "Le titre doit comporter au moins un caractère";       //Définit le message d'erreur
@@ -22,7 +24,11 @@ if (isset($_POST['envoyer'])){
     } else if ($_FILES['poster']==null) {
        $erreur_formulaire = true;                                               //Crée une variable erreur_formulaire
        $message_erreur = "Aucune affiche séléctionée";                          //Définit le message d'erreur
-    }  else if($_FILES['poster']['type']!="image/gif"&&$_FILES['poster']['type']!="image/png"&&$_FILES['poster']['type']!="image/jpeg"&&$_FILES['poster']['type']!="image/jpg"){
+    } else if($_FILES['poster']['type']!="image/gif" &&                         //Si le type n'est pas une image ou un gif
+            $_FILES['poster']['type']!="image/png" && 
+            $_FILES['poster']['type']!="image/jpeg" && 
+            $_FILES['poster']['type']!="image/jpg"){
+																				echo 'lol_petitif';
         $erreur_formulaire = true;
         $message_erreur = "Merci d'upload une image ou un GIF";
     } else if($_FILES['poster']['size']>100000){
@@ -31,8 +37,9 @@ if (isset($_POST['envoyer'])){
     } else {
         echo'oui';
     }
+																				echo 'lol2_grandif';
 }
-
+																				echo 'lol_aprèsgrandf';
 
 
 // Appel du modèle
