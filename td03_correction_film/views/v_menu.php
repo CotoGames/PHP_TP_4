@@ -37,7 +37,7 @@
 					</a></li>
 			</ul>
 			<ul class="nav navbar-nav">
-				<li <?php echo($page=='addfilm' ? 'class="active"':'')?>><a href="index.php?page=addfilm.php">
+				<li <?php echo($page=='addfilm' ? 'class="active"':'')?>><a href="index.php?page=addfilm">
 						<?= MENU_ADDFILM ?>
 				</a></li>
 			</ul>

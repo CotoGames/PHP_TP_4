@@ -33,8 +33,8 @@ if (!isset($_SESSION['logged'])){
 ?>
 <form method="POST" action=<?php PATH_VIEWS.$page.'php'?>>
 	<h1><?= MENU_CONNEXION ?></h1>
-	<b>Nom d'utilisateur :</b> <input type="text" name="pseudo" />
-	<b>Mot de passe :</b> <input type="password" name="pwd"/>
+	<b>Nom d'utilisateur :</b> <input type="text" name="pseudo" placeholder="Username"/>
+	<b>Mot de passe :</b> <input type="password" name="pwd" placeholder="Password"/>
 	<br/>
 	<input type="submit" name="valider" value="<?= SUBMIT ?>">
 </form>
