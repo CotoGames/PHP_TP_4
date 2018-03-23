@@ -40,7 +40,7 @@ if (isset($erreur_formulaire)){
 	</div>
 	<div class="form-group">
 		<label for="exampleSelect">Choix du genre :</label>
-		<select class="form-control" id="exampleSelect">
+		<select class="form-control" id="exampleSelect" name="IDgenre">
 		 <?php
     		foreach ($genres as $i) {
         ?>

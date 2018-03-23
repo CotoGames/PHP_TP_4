@@ -34,4 +34,10 @@ class FilmDAO extends DAO
             $film = new Film($res['id'], $res['titre'], $res['resume'], $res['genId'] , $res['nomFichier']);
         return $film;
     }
+	
+	public function insererFilm($titre, $resum, $genId){
+		$nomFich = 'DSC' .$this->insertId() . strtolower(strrchr($_FILES['poster']['name'], '.'));
+        $req = $this->queryBdd('INSERT INTO film (titre, resume, nomFichier, genId) VALUES (?, ?, ?, ?)', array($titre, $resum, $nomFich, $genId));
+		move_uploaded_file($_FILES['poster']['tmp_name'], PATH_IMAGES.$nomFich);
+	}
 }

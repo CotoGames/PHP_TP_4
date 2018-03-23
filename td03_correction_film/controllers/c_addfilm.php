@@ -1,5 +1,8 @@
 <?php
 require_once (PATH_MODELS . 'GenreDAO.php');
+require_once (PATH_MODELS . 'FilmDAO.php');
+
+$filmDAO = new FilmDAO(DEBUG);
 
 //Zone message d'alerte
 require_once(PATH_VIEWS."alert.php");
@@ -11,10 +14,8 @@ if (isset($_POST['genre'])) {
     }
 }
 
-																				echo 'lol_avtgrandif';
 //Vérification du formulaire
 if (isset($_POST['envoyer'])){
-																				echo 'lol1_grandif';
     if (!preg_match('#[a-z]#i', $_POST['titre'])){
        $erreur_formulaire = true;                                               //Crée une variable erreur_formulaire
        $message_erreur = "Le titre doit comporter au moins un caractère";       //Définit le message d'erreur
@@ -28,18 +29,16 @@ if (isset($_POST['envoyer'])){
             $_FILES['poster']['type']!="image/png" && 
             $_FILES['poster']['type']!="image/jpeg" && 
             $_FILES['poster']['type']!="image/jpg"){
-																				echo 'lol_petitif';
         $erreur_formulaire = true;
         $message_erreur = "Merci d'upload une image ou un GIF";
     } else if($_FILES['poster']['size']>100000){
         $erreur_formulaire = true;
         $message_erreur = "Fichier image trop lourd";
     } else {
-        echo'oui';
+		$filmDAO->insererFilm($_POST['titre'], $_POST['resum'], $_POST['IDgenre']);
+		echo 'oui';	
     }
-																				echo 'lol2_grandif';
 }
-																				echo 'lol_aprèsgrandf';
 
 
 // Appel du modèle
