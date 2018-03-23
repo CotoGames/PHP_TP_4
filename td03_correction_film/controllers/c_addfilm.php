@@ -44,7 +44,7 @@ if (isset($_POST['envoyer'])){
 // Appel du modèle
 // Pour les films et les genres
 $genDAO = new GenreDAO(DEBUG);
-$genres = $genDAO->getAll();
+$genres = $genDAO->getEveryGenre();
 if (isset($genId) and $genId != 0) {
     $selectedGen = $genDAO->getById($genId);
 }
